@@ -28,9 +28,10 @@ public class SimpleTicTacToe {
             System.out.println("| "+ enter.charAt(3) + " "+ enter.charAt(4) + " "+enter.charAt(5) +" |");
             System.out.println("| "+ enter.charAt(6) + " "+ enter.charAt(7) + " "+enter.charAt(8) +" |");
             System.out.println("---------");
+            numx = 0;
+            numo = 0;
+            hasEmpty = false;
             for (int i = 0; i < 9; i++) {
-                numx = 0;
-                numo = 0;
                 if (enter.charAt(i) == 'X') numx++;
                 else if (enter.charAt(i) == 'O') numo++;
                 else hasEmpty = true;
@@ -55,7 +56,7 @@ public class SimpleTicTacToe {
                 System.out.println("O wins");
                 ends = true;
             } else if (hasEmpty) {
-                //System.out.println("Game not finished");
+                System.out.println("Game not finished");
             } else {
                 System.out.println("Draw");
                 ends = true;
